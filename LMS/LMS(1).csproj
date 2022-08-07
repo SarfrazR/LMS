@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{415A4A2A-6B23-4A3C-8C73-F5DBAD8E1E50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LMS</RootNamespace>
+    <AssemblyName>LMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PAL\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Logincs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Logincs.Designer.cs">
+      <DependentUpon>Logincs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Teacher.Designer.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\ViewHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\ViewHistory.Designer.cs">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\ViewNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\ViewNotice.Designer.cs">
+      <DependentUpon>ViewNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\ViewRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\ViewRules.Designer.cs">
+      <DependentUpon>ViewRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="U_PAL\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\addcourseassign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\addcourseassign.Designer.cs">
+      <DependentUpon>addcourseassign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\addstudentinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\addstudentinfo.Designer.cs">
+      <DependentUpon>addstudentinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\addteacherinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\addteacherinfo.Designer.cs">
+      <DependentUpon>addteacherinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\AdminPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\AdminPersonal.Designer.cs">
+      <DependentUpon>AdminPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\adminpersonal1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\adminpersonal1.Designer.cs">
+      <DependentUpon>adminpersonal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\adminpersonalview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\adminpersonalview.Designer.cs">
+      <DependentUpon>adminpersonalview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Classschedule Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Classschedule Main.Designer.cs">
+      <DependentUpon>Classschedule Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\classschedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\classschedule.Designer.cs">
+      <DependentUpon>classschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\course1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\course1.Designer.cs">
+      <DependentUpon>course1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\courseadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\courseadd.Designer.cs">
+      <DependentUpon>courseadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\coursemain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\coursemain.Designer.cs">
+      <DependentUpon>coursemain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\deleteadminper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\deleteadminper.Designer.cs">
+      <DependentUpon>deleteadminper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\deleteclassschedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\deleteclassschedule.Designer.cs">
+      <DependentUpon>deleteclassschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\editresult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\editresult.Designer.cs">
+      <DependentUpon>editresult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\EnrollCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\EnrollCourses.Designer.cs">
+      <DependentUpon>EnrollCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\EnrollStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\EnrollStudent.Designer.cs">
+      <DependentUpon>EnrollStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\FeeSlip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\FeeSlip.Designer.cs">
+      <DependentUpon>FeeSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\PaySlip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\PaySlip.Designer.cs">
+      <DependentUpon>PaySlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Rules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Rules.Designer.cs">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Stdtimetable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Stdtimetable.Designer.cs">
+      <DependentUpon>Stdtimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\studentmain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\studentmain.Designer.cs">
+      <DependentUpon>studentmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\StudentPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\StudentPersonal.Designer.cs">
+      <DependentUpon>StudentPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\teacherassign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\teacherassign.Designer.cs">
+      <DependentUpon>teacherassign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Teacherenroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Teacherenroll.Designer.cs">
+      <DependentUpon>Teacherenroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\teacherenrollcourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\teacherenrollcourse.Designer.cs">
+      <DependentUpon>teacherenrollcourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\teachermain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\teachermain.Designer.cs">
+      <DependentUpon>teachermain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\TeacherPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\TeacherPersonal.Designer.cs">
+      <DependentUpon>TeacherPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\Teachertimetable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\Teachertimetable.Designer.cs">
+      <DependentUpon>Teachertimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\updateadmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\updateadmin.Designer.cs">
+      <DependentUpon>updateadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\updateclassschedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\updateclassschedule.Designer.cs">
+      <DependentUpon>updateclassschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\updatestudentinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\updatestudentinfo.Designer.cs">
+      <DependentUpon>updatestudentinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\updatesubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\updatesubject.Designer.cs">
+      <DependentUpon>updatesubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\updatetecherinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\updatetecherinfo.Designer.cs">
+      <DependentUpon>updatetecherinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\viewcourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\viewcourse.Designer.cs">
+      <DependentUpon>viewcourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_PAL\viewteacherassign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="U_PAL\viewteacherassign.Designer.cs">
+      <DependentUpon>viewteacherassign.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PAL\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Logincs.resx">
+      <DependentUpon>Logincs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\ViewHistory.resx">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\ViewNotice.resx">
+      <DependentUpon>ViewNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\ViewRules.resx">
+      <DependentUpon>ViewRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="U_PAL\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\addcourseassign.resx">
+      <DependentUpon>addcourseassign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\addstudentinfo.resx">
+      <DependentUpon>addstudentinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\addteacherinfo.resx">
+      <DependentUpon>addteacherinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\AdminPersonal.resx">
+      <DependentUpon>AdminPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\adminpersonal1.resx">
+      <DependentUpon>adminpersonal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\adminpersonalview.resx">
+      <DependentUpon>adminpersonalview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Classschedule Main.resx">
+      <DependentUpon>Classschedule Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\classschedule.resx">
+      <DependentUpon>classschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\course1.resx">
+      <DependentUpon>course1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\courseadd.resx">
+      <DependentUpon>courseadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\coursemain.resx">
+      <DependentUpon>coursemain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\deleteadminper.resx">
+      <DependentUpon>deleteadminper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\deleteclassschedule.resx">
+      <DependentUpon>deleteclassschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\editresult.resx">
+      <DependentUpon>editresult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\EnrollCourses.resx">
+      <DependentUpon>EnrollCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\EnrollStudent.resx">
+      <DependentUpon>EnrollStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\FeeSlip.resx">
+      <DependentUpon>FeeSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\PaySlip.resx">
+      <DependentUpon>PaySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Rules.resx">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Stdtimetable.resx">
+      <DependentUpon>Stdtimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\studentmain.resx">
+      <DependentUpon>studentmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\StudentPersonal.resx">
+      <DependentUpon>StudentPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\teacherassign.resx">
+      <DependentUpon>teacherassign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Teacherenroll.resx">
+      <DependentUpon>Teacherenroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\teacherenrollcourse.resx">
+      <DependentUpon>teacherenrollcourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\teachermain.resx">
+      <DependentUpon>teachermain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\TeacherPersonal.resx">
+      <DependentUpon>TeacherPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\Teachertimetable.resx">
+      <DependentUpon>Teachertimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\updateadmin.resx">
+      <DependentUpon>updateadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\updateclassschedule.resx">
+      <DependentUpon>updateclassschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\updatestudentinfo.resx">
+      <DependentUpon>updatestudentinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\updatesubject.resx">
+      <DependentUpon>updatesubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\updatetecherinfo.resx">
+      <DependentUpon>updatetecherinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\viewcourse.resx">
+      <DependentUpon>viewcourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_PAL\viewteacherassign.resx">
+      <DependentUpon>viewteacherassign.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\un.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentWallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ntu_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-learning-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-491.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-alarm-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rules-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\National-Textile-University-NTU.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduation-cap-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-course-assign-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-scorecard-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purchase-order-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purchase-order-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-table-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-timetable-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentWallpaper1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time-Table-Phd-TE-2nd-Spring-2021-Revised-1-1024x601.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_back_arrow_32px1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
